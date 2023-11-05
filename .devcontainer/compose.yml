@@ -1,4 +1,4 @@
-version: '3.2'
+version: "3.2"
 services:
   next_js:
     container_name: $CONTAINER_NAME
@@ -20,6 +20,7 @@ services:
     ports:
       - 80:80
       - 3000:3000
+      - 8788:8788
     volumes:
       # ソースコードとdevcontainerを一緒に管理する場合は明示的にマウント先を指定
       - ..:$HOME_DIR/$WORK_DIR:cached
