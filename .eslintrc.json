@@ -1,9 +1,29 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  //  コード解析時にTypescript用のparserを使用するようにする
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    // 解析の精度を上げるためにtsconfig.jsonの場所を指定
+    "project": "./tsconfig.json"
+  },
   "extends": [
+    // Next.js 専用の ESLint のルール
     "next/core-web-vitals",
-    "plugin:eslint-plugin-next-on-pages/recommended"
+    "plugin:eslint-plugin-next-on-pages/recommended",
+    // prettierの追加 (eslint-config-prettier)
+    "prettier"
   ],
   "plugins": [
+    // ESLint と Prettier が TypeScript をサポートできるようにするPlugin
+    // https://typescript-eslint.io/getting-started
+    "@typescript-eslint",
     "eslint-plugin-next-on-pages"
-  ]
+  ],
+  "rules": {
+    // console.logはcommitしない
+    "no-console": "error"
+  }
 }

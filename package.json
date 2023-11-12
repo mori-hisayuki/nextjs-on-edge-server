@@ -28,6 +28,9 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.7.3",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-next-on-pages": "^1.7.3",
     "vercel": "^32.5.3"
   }
