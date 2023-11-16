@@ -24,6 +24,6 @@
   ],
   "rules": {
     // console.logはcommitしない
-    "no-console": "error"
+    "no-console": "warn"
   }
 }

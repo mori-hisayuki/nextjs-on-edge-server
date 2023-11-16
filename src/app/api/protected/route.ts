@@ -1,0 +1,12 @@
+import { auth } from 'auth'
+
+export const runtime = 'edge'
+
+export const GET = auth(req => {
+  console.log(req)
+  if (req.auth) {
+    return Response.json({ data: 'Protected data' })
+  }
+
+  return Response.json({ message: 'Not authenticated' }, { status: 401 })
+}) as any

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { CustomLink } from '~/components/CustomLink'
 import packageJSON from '../../package.json'
 
